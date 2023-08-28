@@ -1,6 +1,6 @@
 wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cds.lib
 wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cdsLibMgr.il
-wget hhttps://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cdsenv
+wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cdsenv
 wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cdsinfo.tag
 wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/cdsinit
 wget https://raw.githubusercontent.com/mmorri22/cse30342/main/Resources/Cadence/common_bindkeys.il
