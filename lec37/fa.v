@@ -1,6 +1,7 @@
 module halfadd (input a, b, output sum, carry);
 
 	assign sum = a ^ b; 
+	
 	assign carry = a & b;
 	
 endmodule
@@ -13,6 +14,6 @@ module fulladd(input a, b, cin, output sum, cout);
 	
 	halfadd U2( n_sum, cin, sum, n_carry2); 
 	
-	or	U3(cout, n_carry2, n_carry1);
+	assign cout = n_carry2 | n_carry1;
 	
 endmodule
