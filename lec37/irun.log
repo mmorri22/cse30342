@@ -1,0 +1,38 @@
+irun(64): 15.20-s076: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s076: Started on Nov 29, 2023 at 04:56:13 EST
+irun
+	nand2.v
+	nand2_stim.v
+	nand2_driver.v
+file: nand2_stim.v
+	module worklib.nand2_Stim:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		nand2_Driver
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.nand2_Stim:v <0x31760620>
+			streams:   2, words:   889
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		            Instances  Unique
+		Modules:            3       3
+		Primitives:         4       2
+		Registers:          1       1
+		Scalar wires:       5       -
+		Initial blocks:     2       2
+		Cont. assignments:  1       1
+	Writing initial simulation snapshot: worklib.nand2_Driver:v
+Loading snapshot worklib.nand2_Driver:v .................... Done
+ncsim> source /escnfs/home/csesoft/cadence/installs/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+@ time=                   0 A=0, B=0, Y=1
+@ time=                 100 A=0, B=1, Y=1
+@ time=                 200 A=1, B=0, Y=1
+@ time=                 300 A=1, B=1, Y=0
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun(64)	15.20-s076: Exiting on Nov 29, 2023 at 04:56:14 EST  (total: 00:00:01)

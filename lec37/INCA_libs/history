@@ -1,0 +1,24 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(29Nov2023:02:42:21):( irun helloworld.v )
+s2::(29Nov2023:03:05:10):( irun nand2.v nand2_sim.v nand2_driver.v )
+s3::(29Nov2023:03:06:26):( irun nand2.v nand2_sim.v nand2_driver.v )
+s4::(29Nov2023:03:59:00):( irun nand2.v nand2_stim.v nand2_driver.v )
+s5::(29Nov2023:04:03:16):( irun lab3.v lab3_stim.v lab3_driver.v )
+s6::(29Nov2023:04:06:03):( irun lab3.v lab3_stim.v lab3_driver.v )
+s7::(29Nov2023:04:17:03):( irun -access +r -gui lab3.v lab3_stim.v lab3_driver.v )
+s8::(29Nov2023:04:22:16):( irun -access +r -gui lab3.v lab3_stim.v lab3_driver.v )
+s9::(29Nov2023:04:47:43):( irun nand2.v nand2_stim.v nand2_driver.v )
+s10::(29Nov2023:04:48:29):( irun fa.v fa_stim.v fa_driver.v )
+s11::(29Nov2023:04:48:58):( irun fa.v fa_stim.v fa_driver.v )
+s12::(29Nov2023:04:49:21):( irun fa.v fa_stim.v fa_driver.v )
+s13::(29Nov2023:04:49:27):( irun fa.v fa_stim.v fa_driver.v )
+s14::(29Nov2023:04:51:44):( irun fa.v fa_stim.v fa_driver.v )
+s15::(29Nov2023:04:53:25):( irun fa.v fa_stim.v fa_driver.v )
+s16::(29Nov2023:04:54:37):( irun fa.v fa_stim.v fa_driver.v )
+s17::(29Nov2023:04:55:06):( irun fa.v fa_stim.v fa_driver.v )
+s18::(29Nov2023:04:55:16):( irun fa.v fa_stim.v fa_driver.v )
+s19::(29Nov2023:04:55:40):( irun fa.v fa_stim.v fa_driver.v )
+s20::(29Nov2023:04:56:13):( irun nand2.v nand2_stim.v nand2_driver.v )
