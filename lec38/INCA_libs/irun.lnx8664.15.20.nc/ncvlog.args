@@ -5,8 +5,15 @@
 -XLMODE
 ./INCA_libs/irun.lnx8664.15.20.nc
 -RUNMODE
+multiplexor.v
+driver.v
+alu.v
+controller.v
+memory.v
 register.v
-register_test.v
+counter.v
+risc.v
+risc_test.v
 -CDSLIB
 ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
 -HDLVAR

@@ -1,0 +1,9 @@
+multiplexor.v
+driver.v
+alu.v
+controller.v
+memory.v
+register.v
+counter.v
+risc.v
+risc_test.v

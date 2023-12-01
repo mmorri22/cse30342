@@ -1,41 +1,97 @@
 irun(64): 15.20-s076: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s076: Started on Dec 01, 2023 at 11:10:27 EST
+TOOL:	irun(64)	15.20-s076: Started on Dec 01, 2023 at 11:35:41 EST
 irun
-	register.v
-	register_test.v
-file: register.v
-	module worklib.register:v
+	-f files.txt
+		multiplexor.v
+		driver.v
+		alu.v
+		controller.v
+		memory.v
+		register.v
+		counter.v
+		risc.v
+		risc_test.v
+file: multiplexor.v
+	module worklib.multiplexor:v
 		errors: 0, warnings: 0
-file: register_test.v
-	module worklib.register_test:v
+file: driver.v
+	module worklib.driver:v
+		errors: 0, warnings: 0
+file: alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+file: memory.v
+	module worklib.memory:v
+		errors: 0, warnings: 0
+file: counter.v
+	module worklib.counter:v
+		errors: 0, warnings: 0
+file: risc.v
+	module worklib.risc:v
+		errors: 0, warnings: 0
+file: risc_test.v
+	module worklib.risc_test:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		register_test
+		risc_test
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.register:v <0x05297b69>
+		worklib.alu:v <0x1048c777>
+			streams:   1, words:  1023
+		worklib.controller:v <0x279a1eef>
+			streams:   1, words:  5638
+		worklib.counter:v <0x2ada2d05>
+			streams:   3, words:   812
+		worklib.counter:v <0x6c1133ae>
+			streams:   3, words:   751
+		worklib.driver:v <0x4f457bd1>
+			streams:   1, words:   264
+		worklib.memory:v <0x041fafbe>
+			streams:   2, words:   885
+		worklib.multiplexor:v <0x1ea45164>
+			streams:   1, words:   348
+		worklib.register:v <0x1882652b>
 			streams:   2, words:   552
-		worklib.register_test:v <0x034f1ef1>
-			streams:   7, words:  8954
+		worklib.register:v <0x4c594d9b>
+			streams:   2, words:   630
+		worklib.risc:v <0x577b6daf>
+			streams:   2, words:   296
+		worklib.risc_test:v <0x6114ef72>
+			streams:   4, words: 31044
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
-		             Instances  Unique
-		Modules:             2       2
-		Registers:           6       6
-		Scalar wires:        3       -
-		Vectored wires:      2       -
-		Always blocks:       1       1
-		Initial blocks:      2       2
-		Pseudo assignments:  4       4
-	Writing initial simulation snapshot: worklib.register_test:v
-Loading snapshot worklib.register_test:v .................... Done
+		              Instances  Unique
+		Modules:             11       9
+		Resolved nets:        0       1
+		Registers:           31      28
+		Scalar wires:        15       -
+		Expanded wires:       8       1
+		Vectored wires:       9       -
+		Always blocks:       10       7
+		Initial blocks:       1       1
+		Cont. assignments:    2       2
+		Pseudo assignments:   2       2
+	Writing initial simulation snapshot: worklib.risc_test:v
+Loading snapshot worklib.risc_test:v .................... Done
 ncsim> source /escnfs/home/csesoft/cadence/installs/INCISIVE152/tools/inca/files/ncsimrc
 ncsim> run
+Testing reset
+Testing HLT instruction
+Testing JMP instruction
+Testing SKZ instruction
+Testing LDA instruction
+Testing STO instruction
+Testing AND instruction
+Testing XOR instruction
+Testing ADD instruction
+Doing test CPUtest1.txt
+Doing test CPUtest2.txt
+Doing test CPUtest3.txt
 TEST PASSED
-Simulation complete via $finish(1) at time 50 NS + 0
-./register_test.v:43     $finish;
+Simulation complete via $finish(1) at time 2898 NS + 0
+./risc_test.v:157       $finish;
 ncsim> exit
-TOOL:	irun(64)	15.20-s076: Exiting on Dec 01, 2023 at 11:10:29 EST  (total: 00:00:02)
+TOOL:	irun(64)	15.20-s076: Exiting on Dec 01, 2023 at 11:35:42 EST  (total: 00:00:01)

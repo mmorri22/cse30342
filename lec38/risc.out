@@ -1,0 +1,8 @@
+irun(64): 15.20-s076: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab3-mux/multiplexor.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab4-drvr/driver.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab5-alu/alu.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab6-ctrl/controller.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab7-mem/memory.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab8-reg/register.v.
+irun: *E,FILEMIS: Cannot find the provided file ../solutions/lab9-cntr/counter.v.

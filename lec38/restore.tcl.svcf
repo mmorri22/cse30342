@@ -1,0 +1,130 @@
+# SimVision Command Script (Wed Oct 05 01:25:27 PM PDT 2011)
+#
+# Version 10.20.p008
+#
+# You can restore this configuration with:
+#
+#      irun -f files.txt -access rwc -input restore.tcl
+#
+
+
+#
+# Preferences
+#
+preferences set toolbar-SimControl-WatchList {
+  usual
+  hide vplan
+}
+preferences set txe-locate-add-fibers 1
+preferences set txe-navigate-search-locate 0
+preferences set txe-view-hold 0
+preferences set txe-navigate-waveform-locate 1
+preferences set txe-view-hidden 0
+preferences set txe-search-show-linenumbers 1
+preferences set toolbar-OperatingMode-WaveWindow {
+  usual
+  position -pos 4
+  name OperatingMode
+}
+preferences set plugin-enable-svdatabrowser 0
+preferences set plugin-enable-groupscope 0
+preferences set waveform-banding 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set txe-navigate-waveform-next-child 1
+preferences set txe-locate-scroll-x 1
+preferences set txe-locate-scroll-y 1
+preferences set txe-locate-pop-waveform 1
+
+#
+# Simulator
+#
+database require simulator -hints {
+	simulator "irun -f files.txt -access rwc -gui -input restore.tcl"
+}
+
+#
+# Cursors
+#
+set time 0
+if {[catch {cursor new -name  TimeA -time $time}] != ""} {
+    cursor set -using TimeA -time $time
+}
+
+#
+# Mnemonic Maps
+#
+mmap new -reuse -name {Boolean as Logic} -radix %b -contents {
+{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}
+}
+mmap new -reuse -name {Example Map} -radix %x -contents {
+{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}
+}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 700x500+5+49}] != ""} {
+    window geometry "Design Browser 1" 700x500+5+49
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope [subst  {simulator::[format {risc_test.risc_inst}]} ]
+browser yview see [subst  {simulator::[format {risc_test.risc_inst}]} ]
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1010x633+9+72}] != ""} {
+    window geometry "Waveform 1" 1010x633+9+72
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+cursor set -using TimeA -time 0
+waveform baseline set -time 0
+
+set id [waveform add -signals [subst  {
+	{simulator::[format {risc_test.risc_inst.clk}]}
+	{simulator::[format {risc_test.risc_inst.rst}]}
+	{simulator::[format {risc_test.risc_inst.halt}]}
+	{simulator::[format {risc_test.risc_inst.sel}]}
+	{simulator::[format {risc_test.risc_inst.rd}]}
+	{simulator::[format {risc_test.risc_inst.ld_ir}]}
+	{simulator::[format {risc_test.risc_inst.inc_pc}]}
+	{simulator::[format {risc_test.risc_inst.ld_pc}]}
+	{simulator::[format {risc_test.risc_inst.data_e}]}
+	{simulator::[format {risc_test.risc_inst.ld_ac}]}
+	{simulator::[format {risc_test.risc_inst.wr}]}
+	{simulator::[format {risc_test.risc_inst.pc_addr[4:0]}]}
+	{simulator::[format {risc_test.risc_inst.addr[4:0]}]}
+	{simulator::[format {risc_test.risc_inst.data[7:0]}]}
+	{simulator::[format {risc_test.risc_inst.opcode[2:0]}]}
+	{simulator::[format {risc_test.risc_inst.ir_addr[4:0]}]}
+	{simulator::[format {risc_test.risc_inst.acc_out[7:0]}]}
+	{simulator::[format {risc_test.risc_inst.alu_out[7:0]}]}
+	{simulator::[format {risc_test.risc_inst.zero}]}
+	} ]]
+
+waveform xview limits 0 2846ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 600x307+1+25
+
