@@ -2,5 +2,5 @@
 // File created by:  irun
 // Do not modify this file
 //
-controller.v
-controller_test.v
+register.v
+register_test.v

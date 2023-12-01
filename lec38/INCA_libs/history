@@ -3,3 +3,4 @@
 // Do not modify this file
 
 s1::(01Dec2023:10:54:04):( irun controller.v controller_test.v )
+s2::(01Dec2023:11:10:27):( irun register.v register_test.v )

@@ -1,0 +1,5 @@
+cp ../solutions/lab8-reg/register.v . >> /dev/null 2>&1
+irun register.v register_test.v >> /dev/null 2>&1
+grep TEST.PASSED irun.log >> /dev/null 2>&1
+
+#PASS: lab8-reg
