@@ -16,9 +16,9 @@ set DESIGN alu
 set GEN_EFF medium
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
-set _OUTPUTS_PATH outputs_${DATE}
-set _REPORTS_PATH reports_${DATE}
-set _LOG_PATH logs_${DATE}
+set _OUTPUTS_PATH ../outputs_${DESIGN}
+set _REPORTS_PATH ../reports_${DESIGN}
+set _LOG_PATH ../logs_${DATE}
 exec mkdir -p $_LOG_PATH
 ##set MODUS_WORKDIR <MODUS work directory>
 set_db / .init_lib_search_path {.} 
@@ -39,8 +39,8 @@ set_db / .information_level 7
 ###############################################################
 
 
-read_libs muddlib.lib
-read_physical -lef muddlib.lef
+read_libs ../muddlib.lib
+read_physical -lef ../muddlib.lef
 ## Provide either cap_table_file or the qrc_tech_file
 #set_db / .cap_table_file <file> 
 #read_qrc <qrcTechFile name>
@@ -51,8 +51,7 @@ read_physical -lef muddlib.lef
 ## Load Design
 ####################################################################
 
-
-read_hdl Verilog2/alu.sv -language sv
+read_hdl ../Verilog/${DESIGN}.sv -language sv
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"
 time_info Elaboration
@@ -65,7 +64,7 @@ check_design -unresolved
 ## Constraints Setup
 ####################################################################
 
-read_sdc constraints.sdc
+read_sdc ../constraints.sdc
 puts "The number of exceptions is [llength [vfind "design:$DESIGN" -exception *]]"
 
 
