@@ -1,0 +1,9 @@
+1733160573 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/risc_test.v
+1733160571 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/alu.v
+1733160572 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/controller.v
+1733160572 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/register.v
+1733160572 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/memory.v
+1733160572 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/risc.v
+1733160571 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/driver.v
+1733160571 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/multiplexor.v
+1733160572 /escnfs/home/mmorri22/f23-cse30342-test/VLSI/Verilog_sol/risc/counter.v

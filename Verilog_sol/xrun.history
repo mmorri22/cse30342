@@ -1,0 +1,14 @@
+s1(02Dec2024:12:13:29):  xrun helloworld.v 
+s2(02Dec2024:12:13:33):  xrun nand2.v nand2_stim.v nand2_driver.v 
+s3(02Dec2024:12:14:00):  xrun lab3.v lab3_stim.v lab3_driver.v 
+s4(02Dec2024:12:14:17):  xrun -access +r -gui lab3.v lab3_driver.v lab3_stim.v 
+s5(02Dec2024:12:17:38):  xrun fa.v fa_stim.v fa_driver.v 
+s6(02Dec2024:12:17:52):  xrun -access +r -gui fa.v fa_stim.v fa_driver.v 
+s7(02Dec2024:12:18:36):  xrun multiplexor.v multiplexor_test.v 
+s8(02Dec2024:12:19:05):  xrun alu_2.v alu_2_test.v 
+s9(02Dec2024:12:19:18):  xrun alu.v alu_test.v 
+s10(02Dec2024:12:21:03):  xrun controller.v controller_test.v 
+s11(02Dec2024:12:22:51):  xrun controller.v controller_test.v 
+s12(02Dec2024:12:24:38):  xrun register.v register_test.v 
+s13(02Dec2024:12:25:56):  xrun memory.v memory_test.v 
+s14(02Dec2024:12:26:37):  xrun -access +r -gui memory.v memory_test.v 

@@ -1,0 +1,39 @@
+xrun(64): 19.03-s013: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s013: Started on Dec 02, 2024 at 12:26:37 EST
+xrun
+	-access +r
+	-gui
+	memory.v
+	memory_test.v
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		memory_test
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.memory:v <0x4d4881a9>
+			streams:   2, words:   609
+		worklib.memory_test:v <0x6b471901>
+			streams:   5, words: 16488
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Resolved nets:       0       1
+		Registers:           9       9
+		Scalar wires:        3       -
+		Vectored wires:      4       -
+		Always blocks:       1       1
+		Initial blocks:      2       2
+		Cont. assignments:   1       2
+		Pseudo assignments:  2       2
+	Writing initial simulation snapshot: worklib.memory_test:v
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /escnfs/home/csesoft/cadence/installs/XCELIUM1903/tools/xcelium/files/xmsimrc
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	19.03-s013: Exiting on Dec 02, 2024 at 12:27:51 EST  (total: 00:01:14)

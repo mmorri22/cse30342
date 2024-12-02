@@ -1,0 +1,60 @@
+xrun(64): 19.03-s013: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.03-s013: Started on Dec 02, 2024 at 12:30:45 EST
+xrun
+	-f files.txt
+		multiplexor.v
+		driver.v
+		alu.v
+		controller.v
+		memory.v
+		register.v
+		counter.v
+		risc.v
+		risc_test.v
+file: multiplexor.v
+	module worklib.multiplexor:v
+		errors: 0, warnings: 0
+file: driver.v
+	module worklib.driver:v
+		errors: 0, warnings: 0
+file: alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+file: controller.v
+	module worklib.controller:v
+		errors: 0, warnings: 0
+file: memory.v
+	module worklib.memory:v
+		errors: 0, warnings: 0
+file: register.v
+	module worklib.register:v
+		errors: 0, warnings: 0
+file: counter.v
+	module worklib.counter:v
+		errors: 0, warnings: 0
+file: risc.v
+module counter
+             |
+xmvlog: *W,RECOME (risc.v,5|13): recompiling design unit worklib.counter:v.
+	First compiled from line 1 of counter.v.
+xmvlog: *E,DUPUNI: Unit "worklib.counter:v" multiply defined in files "counter.v" and "risc.v".
+xmvlog: *E,MNPDEC: Module name (counter) previously declared. Use -ALLOWREDEFINITION option for duplicate module names.
+ module controller
+                 |
+xmvlog: *W,RECOME (risc.v,35|17): recompiling design unit worklib.controller:v.
+	First compiled from line 1 of controller.v.
+xmvlog: *E,DUPUNI: Unit "worklib.controller:v" multiply defined in files "controller.v" and "risc.v".
+xmvlog: *E,MNPDEC: Module name (controller) previously declared. Use -ALLOWREDEFINITION option for duplicate module names.
+module multiplexor
+                 |
+xmvlog: *W,RECOME (risc.v,78|17): recompiling design unit worklib.multiplexor:v.
+	First compiled from line 1 of multiplexor.v.
+xmvlog: *E,DUPUNI: Unit "worklib.multiplexor:v" multiply defined in files "multiplexor.v" and "risc.v".
+xmvlog: *E,MNPDEC: Module name (multiplexor) previously declared. Use -ALLOWREDEFINITION option for duplicate module names.
+	module worklib.risc:v
+		errors: 0, warnings: 0
+file: risc_test.v
+	module worklib.risc_test:v
+		errors: 0, warnings: 0
+xrun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 1).
+TOOL:	xrun(64)	19.03-s013: Exiting on Dec 02, 2024 at 12:30:45 EST  (total: 00:00:00)

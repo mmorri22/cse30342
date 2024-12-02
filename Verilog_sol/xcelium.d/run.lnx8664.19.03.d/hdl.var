@@ -1,0 +1,9 @@
+define XMSIMRC	( /escnfs/home/csesoft/cadence/installs/XCELIUM1903/tools/xcelium/files/xmsimrc, ~/.xmsimrc )
+include ./hdlrun.var
+define SNAPSHOT worklib.memory_test:v
+DEFINE RUNMODEDEFAULT 1
+DEFINE LIB_MAP ( + => worklib )
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.memory_test:v
+define ELAB_SNAPSHOT
+define SNAPSHOT worklib.memory_test:v
